@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Server Minecraft</title>
+
+  <style>
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,sans-serif;background:#071107;color:white;text-align:center}
+    nav{position:fixed;top:0;width:100%;background:#000000dd;padding:14px;z-index:10;backdrop-filter:blur(8px)}
+    nav a{color:#39ff14;margin:0 7px;text-decoration:none;font-weight:bold;font-size:14px}
+    header{min-height:100vh;padding:90px 20px 40px;background:linear-gradient(#00000099,#071107),url("https://i.ibb.co/zVMW2PZ8/file-0000000065607246b3f862275d0f0703.png") center/cover no-repeat;display:flex;flex-direction:column;justify-content:center;align-items:center}
+    h1{font-size:48px;color:#ffd700;text-shadow:0 0 18px #ffd700;margin:10px}
+    h2{color:#39ff14;font-size:34px;text-shadow:0 0 12px #39ff14}
+    p{font-size:17px;line-height:1.5}
+    section{padding:70px 18px}
+    .btn{background:#39ff14;color:#000;padding:14px 24px;border-radius:14px;text-decoration:none;font-weight:bold;display:inline-block;margin:10px;border:none;cursor:pointer;box-shadow:0 0 18px #39ff14;transition:.2s}
+    .btn:hover{transform:scale(1.05);box-shadow:0 0 28px #39ff14}
+    .btn2{background:#111;color:#39ff14;border:2px solid #39ff14}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;max-width:1150px;margin:auto}
+    .card{background:#101a10;border:2px solid #39ff14;border-radius:22px;padding:25px;box-shadow:0 0 25px #000}
+    .prezzo{font-size:28px;color:#39ff14;font-weight:bold}
+    .email{background:#000;padding:10px;border-radius:10px;color:#39ff14;word-break:break-all}
+    .box{max-width:850px;margin:auto;background:#101a10;border:2px solid #39ff14;border-radius:22px;padding:25px}
+    footer{background:#000;padding:25px;color:#aaa}
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#gioca">Gioca</a>
+  <a href="#store">Store</a>
+  <a href="#regolamento">Regolamento</a>
+  <a href="#discord">Discord</a>
+</nav>
+
+<header id="home">
+  <h1>⛏️ FACTOL-SMP</h1>
+  <p>Survival • Rank • Key • Crate • Community</p>
+  <a class="btn" href="#gioca">🎮 Gioca Ora</a>
+  <a class="btn btn2" href="#store">🛒 Vai allo Store</a>
+</header>
+
+<section id="gioca">
+  <h2>🎮 Gioca Ora</h2>
+  <div class="box">
+    <p><b>IP SERVER:</b></p>
+
+    <button class="btn" onclick="copiaIP()">
+      📋 FACTOL-SMP.play.hosting
+    </button>
+
+    <p id="messaggioIP"></p>
+    <p><b>Versione:</b> 1.21.11</p>
+  </div>
+</section>
+
+<section id="store">
+  <h2>🛒 Store PayPal</h2>
+  <p>Compra rank, key e crate pagando con PayPal.</p>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>👑 Rank VIP</h3>
+      <p class="prezzo">4,99€</p>
+      <p>Tag VIP + kit speciale + 3 key</p>
+      <a class="btn" href="https://www.paypal.me/DanieleRussu/4.99EUR" target="_blank">💸 Paga con PayPal</a>
+      <p class="email">📧 PayPal: danielerussu0@gmail.com</p>
+    </div>
+
+    <div class="card">
+      <h3>💎 Rank MVP</h3>
+      <p class="prezzo">9,99€</p>
+      <p>Tag MVP + kit avanzato + 6 key</p>
+      <a class="btn" href="https://paypal.me/DanieleRussu/9.99EUR" target="_blank">💸 Paga con PayPal</a>
+      <p class="email">📧 PayPal: danielerussu0@gmail.com</p>
+    </div>
+
+    <div class="card">
+      <h3>🔥 Rank LEGEND</h3>
+      <p class="prezzo">14,99€</p>
+      <p>Tag Legend + kit OP + 10 key</p>
+      <a class="btn" href="https://www.paypal.me/DanieleRussu/14.99EUR" target="_blank">💸 Paga con PayPal</a>
+      <p class="email">📧 PayPal: danielerussu0@gmail.com</p>
+    </div>
+
+    <div class="card">
+      <h3>🔑 Common Key</h3>
+      <p class="prezzo">1,99€</p>
+      <p>1 Key Common</p>
+      <a class="btn" href="https://www.paypal.me/DanieleRussu/1.99EUR" target="_blank">🔑 Paga Key</a>
+      <p class="email">📧 PayPal: danielerussu0@gmail.com</p>
+    </div>
+
+    <div class="card">
+      <h3>🔑 Legendary Key</h3>
+      <p class="prezzo">5,99€</p>
+      <p>1 Key Legendary</p>
+      <a class="btn" href="https://www.paypal.me/DanieleRussu/5.99EUR" target="_blank">🔑 Paga Key</a>
+      <p class="email">📧 PayPal: danielerussu0@gmail.com</p>
+    </div>
+
+    <div class="card">
+      <h3>🎁 Bundle Crate</h3>
+      <p class="prezzo">7,99€</p>
+      <p>3 Common Key + 1 Legendary Key</p>
+      <a class="btn" href="https://www.paypal.me/DanieleRussu/7.99EUR" target="_blank">🎁 Paga Bundle</a>
+      <p class="email">📧 PayPal: danielerussu0@gmail.com</p>
+    </div>
+
+  </div>
+
+  <div class="box" style="margin-top:30px">
+    <h3>⚠️ Dopo il pagamento</h3>
+    <p>Apri ticket su Discord e manda lo screen del pagamento.</p>
+    <p>Scrivi anche il tuo nickname Minecraft.</p>
+  </div>
+</section>
+
+<section id="regolamento">
+  <h2>📜 Regolamento</h2>
+  <div class="box">
+    <p>❌ Vietato usare cheat, hack, autoclicker o client non consentiti.</p>
+    <p>❌ Vietato insultare, minacciare o mancare di rispetto.</p>
+    <p>❌ Vietato spam o pubblicità di altri server.</p>
+    <p>❌ Vietato sfruttare bug o glitch.</p>
+    <p>❌ Vietato fingersi staff.</p>
+    <p>✅ Rispetta sempre staff e player.</p>
+    <p>⚠️ Punizioni: warn, mute, kick o ban.</p>
+  </div>
+</section>
+
+<section id="discord">
+  <h2>💬 Discord</h2>
+  <p>Entra nel Discord per supporto, acquisti e ticket.</p>
+  <a class="btn" href="https://discord.gg/GaFSjnDA5b" target="_blank">🎫 Entra nel Discord</a>
+</section>
+
+<footer>
+  © 2026 Server Minecraft • Store PayPal
+</footer>
+
+<script>
+function copiaIP() {
+  navigator.clipboard.writeText("FACTOL-SMP.play.hosting");
+  document.getElementById("messaggioIP").innerText = "✅ IP copiato!";
+}
+</script>
+
+</body>
+</html>
